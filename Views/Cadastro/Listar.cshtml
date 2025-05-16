@@ -1,0 +1,57 @@
+﻿@model IEnumerable<AgroCoops.Models.Pessoa>
+@{
+
+    ViewBag.Title = "Lista de Usuarios";
+}
+
+
+<h2>Lista de Usuarios</h2>
+
+<a class=" btn btn-danger" href="/Cadastro/CadastroPessoa"> Cadastrar</a>
+
+<a class=" btn btn-primary" href="/Lista/ListaCoop"> Listar as Cooperativas</a>
+
+<a class=" btn btn-block" href="/Cadastro/CadastroProd"> Cadastrar Produto</a>
+
+
+<table class="table">
+
+
+
+    <thead>
+
+
+
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">Email</th>
+            <th scope="col">Senha</th>
+            <th scope="col">TipoPessoa</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.IDPessoa</th>
+                <td>@item.Nome</td>
+                <td>@item.Telefone</td>
+                <td>@item.Email</td>
+                <td>@item.Senha</td>
+                <td>@item.TipoPessoa</td>
+
+
+                <td><a class="btn btn-primary" href="/Cadastro/EditarPessoa?id=@item.IDPessoa">Editar</a></td>
+
+                <td><a class="btn btn-danger" href="/Cadastro/ExcluirPessoa?id=@item.IDPessoa">Excluir</a></td>
+
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+

@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Cadastro do Produto";
+}
+
+<h2>Cadastro do Produto</h2>
+
+<form name="Form1" action="/Cadastro/CadastroProd" method="post">
+
+    <div class="form-group">
+        <label for="CarteiraProdutor">Descricao do Produto</label>
+        <input type="text" name="descricaoP" class="form-control" id="descricaoP" maxlength="100" required placeholder="Insira seu Produto">
+
+    </div>
+
+    <div class="form-group">
+        <label for="ValorUnitario">Valor Unitario</label>
+        <input type="text" name="valorunit" class="form-control" id="valorunit" maxlength="100" required placeholder="Insira o Valor do Produto">
+
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+    <a class="btn btn-danger" href="/Cadastro/Listar">Voltar</a>
+
+</form>

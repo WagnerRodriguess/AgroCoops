@@ -1,0 +1,49 @@
+﻿@model IEnumerable<AgroCoops.Models.Produto>
+@{
+
+    ViewBag.Title = "Lista de Produtos";
+}
+
+
+<h2>Lista de Produtos</h2>
+
+<a class=" btn btn-danger" href="/Cadastro/CadastroProd"> Cadastrar Produto</a>
+<a class=" btn btn-danger" href="/Cadastro/Listar"> Listar Usuarios</a>
+<a class=" btn btn-danger" href="/Lista/ListarCoop"> Listar Cooperativas</a>
+
+<table class="table">
+
+
+
+    <thead>
+
+
+
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome do Produto</th>
+            <th scope="col">Valor Unitário</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.IDProduto</th>
+                <td>@item.DescricaoProduto</td>
+                <td>@item.ValorUnitario</td>
+           
+
+
+                <td><a class="btn btn-primary" href="/Lista/EditarProd?id=@item.IDProduto">Editar</a></td>
+
+                <td><a class="btn btn-danger" href="/Lista/ExcluirProd?id=@item.IDProduto">Excluir</a></td>
+
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+

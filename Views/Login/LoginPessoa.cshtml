@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "LoginPessoa";
+}
+
+<h2>Login</h2>
+
+
+<form name="Form1" action="/Login/LoginPessoa" method="post">
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="text" name="Email" class="form-control" id="Email" maxlength="100" required placeholder="Digite seu Email">
+    </div>
+
+    <div class="form-group">
+        <label for="Senha">Senha</label>
+        <input type="password" name="senha" class="form-control" id="senha" maxlength="6" required placeholder="Digite sua senha">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Logar</button>
+    <a class="btn btn-danger" href="/Cadastro/CadastroPessoa">Cadastro</a>
+</form>

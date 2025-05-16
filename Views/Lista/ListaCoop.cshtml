@@ -1,0 +1,57 @@
+﻿@model IEnumerable<AgroCoops.Models.Cooperativa>
+@{
+
+    ViewBag.Title = "Lista de Cooperativas";
+}
+
+
+<h2>Lista de Cooperativas</h2>
+
+<a class=" btn btn-danger" href="/Cadastro/CadastroCoop"> Cadastrar Cooperativa</a>
+<a class=" btn btn-danger" href="/Cadastro/Listar"> Listar Usuarios</a>
+
+<table class="table">
+
+
+
+    <thead>
+
+
+
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome da Cooperativa</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">Email</th>
+            <th scope="col">Cnpj da Cooperativa</th>
+            <th scope="col">Cidade</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Região</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.IDCooperativa</th>
+                <td>@item.NomeCooperativa</td>
+                <td>@item.Telefone</td>
+                <td>@item.Email</td>
+                <td>@item.CnpjCooperativo</td>
+                <td>@item.Cidade</td>
+                <td>@item.Estado</td>
+                <td>@item.Regiao</td>
+
+
+                <td><a class="btn btn-primary" href="/Lista/EditarCoop?id=@item.IDCooperativa">Editar</a></td>
+
+                <td><a class="btn btn-danger" href="/Lista/ExcluirCoop?id=@item.IDCooperativa">Excluir</a></td>
+
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+

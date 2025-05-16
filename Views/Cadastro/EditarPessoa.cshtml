@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "EditarPessoa";
+}
+
+<h2>Editar Pessoa</h2>
+
+<form name="Forms1" action="/Cadastro/EditarPessoa?id=@Model.IDPessoa" method="post">
+    <div class="form-group">
+        <label for="Nome">Nome</label>
+        <input type="text" class="form-control" id="nome" name="nome" value="@Model.Nome" />
+    </div>
+
+    <div class="form-group">
+        <label for="Telefone">Telefone</label>
+        <input type="text" name="Telefone" class="form-control" id="Telefone"  value="@Model.Telefone">
+    </div>
+
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="text" class="form-control" name="email" id="email" value="@Model.Email" />
+    </div>
+
+    <div class="form-group">
+        <label for="Senha">Senha</label>
+        <input type="password" name="Senha" class="form-control" id="senha" maxlength="6" required placeholder="Digite sua senha" value="@Model.Senha">
+    </div>
+
+    <label class="form-group" for="tipoPessoa">Tipo Pessoa</label>
+
+    <div class="form-group">
+
+        <div>
+            <input type="radio" name="tipoPessoa" id="tipoPessoa" class="clinput"
+                   required value="@Model.TipoPessoa" /> Produtor
+        </div>
+        <div>
+            <input type="radio" name="tipoPessoa" id="tipoPessoa" class="clinput"
+                   required value="@Model.TipoPessoa" /> Pessoa Fisica
+        </div>
+        <div>
+            <input type="radio" name="tipoPessoa" id="tipoPessoa" class="clinput"
+                   required value="@Model.TipoPessoa" /> Pessoa Juridica
+        </div>
+    </div>
+   
+    <button type="submit" class="btn btn-primary">Editar</button>
+    <a href="/Colaborador/IndexCol" class="btn btn-danger"> Voltar </a>
+</form>

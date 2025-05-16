@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AgroBDModelStoreContainer" CdmEntityContainer="AgroBDEntities2">
+    <EntitySetMapping Name="Cooperativa">
+      <EntityTypeMapping TypeName="AgroBDModel.Cooperativa">
+        <MappingFragment StoreEntitySet="Cooperativa">
+          <ScalarProperty Name="IDCooperativa" ColumnName="IDCooperativa" />
+          <ScalarProperty Name="NomeCooperativa" ColumnName="NomeCooperativa" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CnpjCooperativo" ColumnName="CnpjCooperativo" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Regiao" ColumnName="Regiao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Entrada">
+      <EntityTypeMapping TypeName="AgroBDModel.Entrada">
+        <MappingFragment StoreEntitySet="Entrada">
+          <ScalarProperty Name="IDEntrada" ColumnName="IDEntrada" />
+          <ScalarProperty Name="IDProdutor" ColumnName="IDProdutor" />
+          <ScalarProperty Name="IDCooperativa" ColumnName="IDCooperativa" />
+          <ScalarProperty Name="IDProduto" ColumnName="IDProduto" />
+          <ScalarProperty Name="QuantidadeEntrada" ColumnName="QuantidadeEntrada" />
+          <ScalarProperty Name="DataEntrada" ColumnName="DataEntrada" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estoque">
+      <EntityTypeMapping TypeName="AgroBDModel.Estoque">
+        <MappingFragment StoreEntitySet="Estoque">
+          <ScalarProperty Name="IDProduto" ColumnName="IDProduto" />
+          <ScalarProperty Name="QuantidadeEstoque" ColumnName="QuantidadeEstoque" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pedido">
+      <EntityTypeMapping TypeName="AgroBDModel.Pedido">
+        <MappingFragment StoreEntitySet="Pedido">
+          <ScalarProperty Name="IDPedido" ColumnName="IDPedido" />
+          <ScalarProperty Name="IDPessoa" ColumnName="IDPessoa" />
+          <ScalarProperty Name="DataPedido" ColumnName="DataPedido" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PedidoEstoque">
+      <EntityTypeMapping TypeName="AgroBDModel.PedidoEstoque">
+        <MappingFragment StoreEntitySet="PedidoEstoque">
+          <ScalarProperty Name="IDPedido" ColumnName="IDPedido" />
+          <ScalarProperty Name="IDProduto" ColumnName="IDProduto" />
+          <ScalarProperty Name="IDCooperativa" ColumnName="IDCooperativa" />
+          <ScalarProperty Name="IDPessoa" ColumnName="IDPessoa" />
+          <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
+          <ScalarProperty Name="ObservacaoProduto" ColumnName="ObservacaoProduto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pessoa">
+      <EntityTypeMapping TypeName="AgroBDModel.Pessoa">
+        <MappingFragment StoreEntitySet="Pessoa">
+          <ScalarProperty Name="IDPessoa" ColumnName="IDPessoa" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
+          <ScalarProperty Name="TipoPessoa" ColumnName="TipoPessoa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PessoaFisica">
+      <EntityTypeMapping TypeName="AgroBDModel.PessoaFisica">
+        <MappingFragment StoreEntitySet="PessoaFisica">
+          <ScalarProperty Name="IDPessoa" ColumnName="IDPessoa" />
+          <ScalarProperty Name="Cpf" ColumnName="Cpf" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PessoaJuridica">
+      <EntityTypeMapping TypeName="AgroBDModel.PessoaJuridica">
+        <MappingFragment StoreEntitySet="PessoaJuridica">
+          <ScalarProperty Name="IDPessoa" ColumnName="IDPessoa" />
+          <ScalarProperty Name="Cnpj" ColumnName="Cnpj" />
+          <ScalarProperty Name="NomeFantasia" ColumnName="NomeFantasia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProdCoop">
+      <EntityTypeMapping TypeName="AgroBDModel.ProdCoop">
+        <MappingFragment StoreEntitySet="ProdCoop">
+          <ScalarProperty Name="IDPessoa" ColumnName="IDPessoa" />
+          <ScalarProperty Name="IDCooperativa" ColumnName="IDCooperativa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Produto">
+      <EntityTypeMapping TypeName="AgroBDModel.Produto">
+        <MappingFragment StoreEntitySet="Produto">
+          <ScalarProperty Name="IDProduto" ColumnName="IDProduto" />
+          <ScalarProperty Name="DescricaoProduto" ColumnName="DescricaoProduto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Produtor">
+      <EntityTypeMapping TypeName="AgroBDModel.Produtor">
+        <MappingFragment StoreEntitySet="Produtor">
+          <ScalarProperty Name="IDPessoaFisica" ColumnName="IDPessoaFisica" />
+          <ScalarProperty Name="CarteiraProdutor" ColumnName="CarteiraProdutor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="AgroBDModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ValorUnitario">
+      <EntityTypeMapping TypeName="AgroBDModel.ValorUnitario">
+        <MappingFragment StoreEntitySet="ValorUnitario">
+          <ScalarProperty Name="IDValorUnitario" ColumnName="IDValorUnitario" />
+          <ScalarProperty Name="IDProduto" ColumnName="IDProduto" />
+          <ScalarProperty Name="IDCooperativa" ColumnName="IDCooperativa" />
+          <ScalarProperty Name="DataValorUnitario" ColumnName="DataValorUnitario" />
+          <ScalarProperty Name="ValorUnitario1" ColumnName="ValorUnitario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

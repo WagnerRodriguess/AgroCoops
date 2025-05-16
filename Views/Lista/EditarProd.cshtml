@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "EditarProd";
+}
+
+<h2>EditarProd</h2>
+
+<form name="Form1" action="/Lista/EditarProd" method="post">
+
+    <div class="form-group">
+        <label for="CarteiraProdutor">Descricao do Produto</label>
+        <input type="text" name="descricaoP" class="form-control" id="descricaoP" value="@Model.DescricaoProduto"   placeholder="Insira seu Produto">
+
+    </div>
+
+    <div class="form-group">
+        <label for="ValorUnitario">Valor Unitario</label>
+        <input type="text" name="valorunit" class="form-control" id="valorunit" value="@Model.ValorUnitario" placeholder="Insira o Valor do Produto">
+
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary">Editar</button>
+    <a class="btn btn-danger" href="/Lista/ListaProd">Voltar</a>
+
+</form>

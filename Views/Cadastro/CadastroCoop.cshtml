@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "CadastroCoop";
+}
+
+<h2>CadastroCoop</h2>
+
+<form name="Form1" action="/Cadastro/CadastroCoop" method="post">
+    <div class="form-group">
+        <label for="NomeCooperativa">Nome Cooperativa</label>
+        <input type="text" name="nomecoop" class="form-control" id="nomecoop" maxlength="65" required placeholder="Digite o nome da Cooperativa">
+
+    </div>
+
+    <div class="form-group">
+        <label for="Telefone">Telefone</label>
+        <input type="text" name="telefoneC" class="form-control" id="telefoneC" maxlength="11" required placeholder="Insira o Telefone da Cooperativa">
+    </div>
+
+    <div class="form-group">
+        <label for="Email">E-mail</label>
+        <input type="text" name="emailC" class="form-control" id="emailC" maxlength="100" required placeholder="Digite o Email da Cooperativa">
+    </div>
+
+    <div class="form-group">
+        <label for="CnpjCooperativo">Cnpj Cooperativo</label>
+        <input type="text" name="cnpjC" class="form-control" id="cnpjC" maxlength="11" required placeholder="Digite o Cnpj da Cooperativa">
+    </div>
+
+    <div class="form-group">
+        <label for="Cidade">Cidade</label>
+        <input type="text" name="Cidade" class="form-control" id="cidade" maxlength="40" required placeholder="Insira o nome da Cidade">
+    </div>
+
+  <div>  <label class="form-group" for="Estado">Estado</label> </div>
+    <select name="estado" class="form-group">
+        <option value="Al">Alagoas</option>
+        <option value="Ba">Bahia</option>
+        <option value="Pe">Pernambuco</option>
+        <option value="Se">Sergipe</option>
+
+    </select>
+
+
+    <div class="form-group">
+        <label for="Regiao">Região</label>
+        <input type="text" name="Regiao" class="form-control" id="regiao" maxlength="20" required placeholder="Insira a Região">
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+    <a class="btn btn-danger" href="/Lista/ListaCoop">Voltar</a>
+
+</form>
